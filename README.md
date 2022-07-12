@@ -41,7 +41,7 @@ docker run -it --name apisix \
 ext-plugin:
   cmd: 
     - "/usr/local/apisix/javascript-plugin-runner/bin/runner"
-    - "/usr/local/apisix/javascript-plugin-runner/examples/say.js"
+    - "/usr/local/apisix/javascript-plugin-runner/examples/say/say.js"
 
 apisix:
   port_admin: 9180
