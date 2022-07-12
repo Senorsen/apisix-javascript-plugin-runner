@@ -1,8 +1,7 @@
-FROM debian:buster-20210621
+FROM debian:bullseye
 
 ENV DEBIAN_FRONTEND=noninteractive
-RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-RUN apt-get update; \
+RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     ca-certificates \
     build-essential \
@@ -11,7 +10,7 @@ RUN apt-get update; \
     git \
     openssh-client \
     unzip \
-    wget; \
+    wget && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /opt
